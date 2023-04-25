@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEST</title>
+	</head>
+
+  <canvas class="canvas1" id="c1"></canvas> 
+   
+
+
+	<body>
+
+
+
+
+
+    <main>
+
+
+      <section>  
+          <h2>projects</h2>
+
+    <!-- CONTAINER ---------------------------------------------------------------------------------------------------------- -->
+   <div class="projectcontainer"> <!-- GRID 1:1 - Width 50VW -->
+                      <div class="project"> <!-- empty class? -->
+                                            <p class="category1"> <!-- Japanese/Category-->
+                                                カテゴリー1
+                                            </p> <br>
+
+                                            <p class="category2"> <!-- Product Name-->
+                                              TEST ROW 1
+                                            </p> <br>
+
+                                            <p class="category3"> <!-- Description-->
+                                                A basic description of the product goes into this section. May contain specifications as well.
+                                            </p>
+                                            <button class="viewproject"> <!-- caption 1-->
+                                              VIEW PRODUCT
+                                            </button>
+                      </div>
+     
+
+                      <div>
+                        <canvas class="hand1" id="c2"></canvas> 
+                      </div>
+  </div>
+  <!-- CONTAINER ---------------------------------------------------------------------------------------------------------- -->
+
+    <!-- CONTAINER ---------------------------------------------------------------------------------------------------------- -->
+    <div class="projectcontainer"> <!-- GRID 1:1 - Width 50VW -->
+        <div class="project"> <!-- empty class? -->
+                              <p class="category1"> <!-- Japanese/Category-->
+                                カテゴリー2
+                              </p> <br>
+
+                              <p class="category2"> <!-- Product Name-->
+                                TEST ROW 2
+                              </p> <br>
+
+                              <p class="category3"> <!-- Description-->
+                                A basic description of the product goes into this section. May contain specifications as well.
+                              </p>
+                              <button class="viewproject"> <!-- caption 1-->
+                                VIEW PRODUCT
+                              </button>
+        </div>
+
+
+        <div>
+          <canvas class="hand2" id="c3"></canvas> 
+        </div>
+</div>
+<!-- CONTAINER ---------------------------------------------------------------------------------------------------------- -->
+
+
+      </section>
+
+      <!-- ABOUT -->
+        
+      <section> 
+         
+
+        <h2>about</h2>
+
+        <!-- seperator -->
+                    
+
+                      <p class="copyright2">Copyright © 2022 MUSALAODE. All Rights Reserved.</p>
+                      
+                  </div>
+
+
+      </section>
+
+
+      
+
+       <!-- seperator -->
+
+
+    </main>
+    
+ <script type="module" src="/main.js"></script>
+
+<script type="module">
+
+import './style.css';
+import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+
+
+
+// Setup
+
+
+//SCENE
+const scene1 = new THREE.Scene();
+const scene2 = new THREE.Scene();
+const scene3 = new THREE.Scene();
+scene1.add(scene1);
+scene2.add(scene2);
+scene3.add(scene3);
+
+//CAMERA
+const camera1 = new THREE.PerspectiveCamera(50, 2, 0.1, 1000);
+const camera2 = new THREE.PerspectiveCamera(50, 2, 0.1, 1000);
+const camera3 = new THREE.PerspectiveCamera(50, 2, 0.1, 1000);
+scene1.add(camera1);
+scene2.add(camera2);
+scene3.add(camera3);
+
+//CANVAS
+const canvas1 = document.getElementById('c1')
+const canvas2 = document.getElementById('c2')
+const canvas3 = document.getElementById('c3')
+scene1.add(canvas1);
+scene2.add(canvas2);
+scene3.add(canvas3);
+
+//RENDERER
+const renderer1 = new THREE.WebGLRenderer({ canvas: canvas1 });
+renderer1.setPixelRatio(window.devicePixelRatio);
+renderer1.setSize(window.innerWidth, window.innerHeight);
+renderer1.render (scene1, camera1, canvas1);
+
+const renderer2 = new THREE.WebGLRenderer({ canvas: canvas2 });
+renderer2.setPixelRatio(window.devicePixelRatio);
+renderer2.setSize(window.clientWidth, window.clientHeight);
+renderer2.render (scene2, camera2, canvas2);
+
+const renderer3 = new THREE.WebGLRenderer({ canvas: canvas3 });
+renderer3.setPixelRatio(window.devicePixelRatio);
+renderer3.setSize(window.clientWidth, window.clientHeight);
+renderer3.render (scene3, camera3, canvas3);
+
+ //document.body.appendChild(renderer.domElement)
+
+//MODEL_CIRCLE FLOOR
+const geometry1 = new THREE.CircleGeometry( 184, 64 );
+const material1 = new THREE.MeshStandardMaterial( { color: 0x000000, wireframe: true, transparent:true, opacity: 0.07 } );
+const circle1 = new THREE.Mesh( geometry1, material1 );
+circle1.position.z = -5;
+circle1.position.y = -3;
+circle1.position.x = 0;
+circle1.rotation.x = 1.6;
+scene1.add( circle1 );
+
+//MODEL_SPHERE
+const geometry2 = new THREE.SphereGeometry( 184, 64, 64 );
+const material2 = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, transparent:true, opacity: 0.02 } );
+const sphere2 = new THREE.Mesh( geometry2, material2 );
+sphere2.position.z = -5;
+sphere2.position.y = -3;
+sphere2.position.x = 0;
+sphere2.rotation.x = 1.6;
+scene1.add( sphere2 );
+
+//MODEL_RING
+const geometry3 = new THREE.RingGeometry( 184, 188, 80 );
+const material3 = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, transparent:true, opacity: 0.01  } );
+const mesh3 = new THREE.Mesh( geometry3, material3 );
+mesh3.position.z = -5;
+mesh3.position.y = -3;
+mesh3.position.x = 0;
+scene1.add( mesh3 );
+
+//MODEL_RING2
+const geometry4 = new THREE.RingGeometry( 184, 188, 80 );
+const material4 = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, transparent:true, opacity: 0.01  } );
+const mesh4 = new THREE.Mesh( geometry4, material4 );
+mesh4.position.z = -5;
+mesh4.position.y = -3;
+mesh4.position.x = 0;
+scene1.add( mesh4 );
+
+//MODEL_STAR
+function addStar() {
+const geometry = new THREE.SphereGeometry(0.1, 4, 24);
+const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+const star = new THREE.Mesh(geometry, material);
+const [x, y, z] = Array(3)
+    .fill()
+    .map(() => THREE.MathUtils.randFloatSpread(100));
+star.position.set(x, y, z);
+scene1.add(star); }
+Array(200).fill().forEach(addStar);
+
+//MODEL_MOUSE 1
+const loader = new GLTFLoader();
+var mouse;
+loader.load( 'traffic_signal_control_cabinet_-_3d_scan_quixel.glb', function ( gltf ) {
+  mouse = gltf.scene;
+  gltf.scene.position.z = -5.5;
+  gltf.scene.position.x = 2;
+  gltf.scene.position.y = -3;
+  gltf.scene.rotation.y = -0.7;
+  gltf.scene.scale.set(2, 2, 2);
+	scene1.add( mouse); }, 
+  undefined, function ( error ) {
+	console.error( error ); } );
+
+//LIGHTS
+const pointLight = new THREE.PointLight(0xffffff,3,1000);
+pointLight.position.set(5, 5, 5);
+const pointLight2 = new THREE.PointLight(0xffffff,0.8);
+pointLight2.position.set(25, 20, 200);
+const ambientLight = new THREE.AmbientLight(0xffffff);
+scene1.add(pointLight, pointLight2, ambientLight);
+
+const ambientLight2 = new THREE.AmbientLight(0xffffff);
+scene2.add(ambientLight2);
+
+const ambientLight3 = new THREE.AmbientLight(0xffffff);
+scene3.add(ambientLight3);
+
+//BACKGROUND
+const spaceTexture = new THREE.TextureLoader().load('whitebg.jpeg');
+scene1.background = spaceTexture;
+const handbackground1 = new THREE.TextureLoader().load('spacepdf.jpg');
+scene2.background = handbackground1;
+const handbackground2 = new THREE.TextureLoader().load('spacepdf.jpg');
+scene3.background = handbackground2;
+
+//SCROLL ANIMATION
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  circle1.rotation.z += -0.005;
+  sphere2.rotation.z += 0.0025;
+  camera1.position.z = t * -0.03;
+  camera1.position.x = t * -0.0006;
+  camera1.rotation.y = t * -0.0006;}
+
+document.body.onscroll = moveCamera;
+moveCamera();
+
+//ANIMATION LOOP
+function animate() {
+  requestAnimationFrame(animate);
+
+  mesh3.rotation.y += 0.00215;
+  mesh4.rotation.y += -0.00215;
+  circle1.rotation.z += -0.0001;
+  sphere2.rotation.z += 0.0001;
+  
+//controls.update();
+  renderer1.render(scene1, camera1)
+  renderer2.render(scene2, camera2)
+  renderer3.render(scene3, camera3)
+
+
+}
+
+animate();
+
+//NAVBAR
+$('.navTrigger').click(function () {
+  $(this).toggleClass('active');
+  console.log("Clicked menu");
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();});
+
+		</script>
+	</body>
+</html>

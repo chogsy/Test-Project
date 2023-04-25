@@ -1,0 +1,354 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+.canvas1 {
+  position: fixed;
+}
+
+.hand1 {
+  height: 24.5em;
+  width: 24.5em;
+}
+@media (max-width: 600px) {
+  .hand1 {
+    height: 24.5em;
+    width: 13em; }
+}
+
+.hand2 {
+  height: 24.5em;
+  width: 24.5em;
+}
+@media (max-width: 600px) {
+  .hand2 {
+    height: 24.5em;
+    width: 13em; }
+}
+
+
+.himyname {
+  padding-top:15vh;
+}
+
+.project-images {
+    height: 14vh;
+    margin-right: 5vh;
+    margin-bottom: 5vh;
+  }
+
+.projectcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ratio 1:1 */
+  grid-gap: 10vh;
+  width: 50vw; /* width 50vw */ /* ratio 1:1 */
+  margin-bottom: 5vh;
+    }
+
+  @media (max-width: 800px) {
+    .projectcontainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* ratio 1:1 */
+      grid-gap: 10vh;
+      width: 80vw; /* width 50vw */ /* ratio 1:1 */
+      margin-bottom: 5vh; }
+  }
+
+
+
+  
+
+    .projectcontainer-projectpage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10vh;
+        width: 80vw;
+        margin-bottom: 5vh;
+        margin-top: 17.2vh;
+          }
+
+
+
+.projectpreview-junio {
+  
+  background-image: url("JUNIO.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.projectpreview-sea {
+  
+  background-image: url("SEA.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.projectpreview-jtp {
+  
+  background-image: url("JOURNEY\ TO\ PIANOLAND.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+
+}
+
+.projectpreview-angka {
+  
+  background-image: url("angka.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.projectpreview-icadxivirtual {
+  
+  background-image: url("IVXI1.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  transition: all 0.4s ease;
+}
+
+.projectpreview-icadxivirtual:hover {
+  
+  background-image: url("IVXI2.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.projectpreview-icadxi {
+  
+  background-image: url("ICADWHITE.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  transition: all 0.4s ease;}
+
+.category1 { /* NAVBAR */
+  font-family: poppins;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 2.7vh;
+  margin-top: 0vh;
+  margin-bottom: 3.5vh;
+  color: #A7A9AC;
+  
+}
+
+.category2 {
+  font-family: poppins;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 4.3vh;
+  margin-top: -5vh;
+  line-height: 4.5vh;
+  color: #231F20;
+  
+}
+
+.category2-projectpage {
+    font-family: poppins;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 8vh;
+    margin-top: -5vh;
+    line-height: 8.2vh;
+    
+  }
+
+  .category1-projectpage {
+    font-family: poppins;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 5.4vh;
+    margin-top: 0vh;
+    margin-bottom: 3.5vh;
+    color: #231F20;
+    
+  }
+
+.category2-2 {
+    font-family: poppins;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4.3vh;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+    line-height: 4.5vh;
+    
+  }
+
+
+  .category2-3 {
+    font-family: poppins;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4.3vh;
+    margin-top: 12vh;
+    margin-bottom: 8vh;
+    line-height: 4.5vh;
+    
+  }
+.category3 {
+  font-family: poppins;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 2vh;
+  margin-top: -5vh;
+  color: #bebebe;
+}
+
+
+
+
+.whatido {
+    color: white;
+}
+
+.socialicon {
+    height: 5vh;
+    color: white;
+    margin-left: 3vh;
+    cursor: pointer;
+}
+
+.socialicon:hover {
+    fill: #ff9900;
+}
+
+.socialicon1 {
+    height: 5vh;
+    color: white;
+    cursor: pointer;
+}
+
+.copyright2 {
+    height: 5vh;
+    color:#777777;
+    font-weight: 100;
+
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 2.5rem;
+    }
+
+:root {
+  --spacing: 350px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0x 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1 {
+  font-family: poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15rem;
+}
+
+h2 {
+  font-family: poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 9rem;
+}
+
+h3, blockquote {
+  font-family: poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing);
+    height: 100vh;
+
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
+
+  
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+
+
+
+
+
+
+/* BUTTON  #ff9900;*/
+.viewproject {
+font-family: poppins;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2vh;
+  color: rgb(180, 180, 180);
+  margin-top: 1.7vh;
+  margin-bottom: 6vh;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0,5vh;
+  background: none;
+  border-color: rgb(180, 180, 180);
+  transition: all 0.3s ease 0s;
+  float: right;
+}
+
+.viewproject:hover {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .viewproject:active {
+
+      color: #ff9900;
+      border-color: #ff9900;
+    }
+    
+
+    /* BUTTON  #ff9900;*/
+
+
+
+    /* IAMGE GALLERY */
+
+    
